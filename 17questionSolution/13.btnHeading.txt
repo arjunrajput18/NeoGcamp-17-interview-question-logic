@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+:root{
+    --primary-color:#a21caf;
+    --secondary-color:white;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+  margin: 0%;
+}
+nav{
+    background-color: #a21caf;
+ padding: 1rem;
+    color: whitesmoke;
+    font-weight: bold;
+    border-bottom-left-radius: 1rem;
+
+}
+.nav-brand{
+    font-size: medium;
+    font-weight: bold;
+}
+.nav-pills{
+    padding: 0rem 1rem;
+}
+.list-non-bullet{
+    text-align: right;
+    list-style: none;
+    padding-inline-start: 0px;
+    
+
+
+}
+.list-item-inline{
+    padding:0rem 1rem ;
+    display: inline;
+}
+
+#btn-primary{
+    border: 1px solid var(--primary-color);
+    border-radius: 0.5rem 0.5rem;
+    padding: 8px 16px;
+    margin: 1rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 16px;
+
+   
+}
+#btn-secondary{
+    border: 1px solid var(--primary-color);
+    background-color: whitesmoke;
+    color: var(--primary-color);
+    border-radius: 0.5rem 0.5rem;
+    padding: 0.7rem 0.7rem;;
+    margin: 1rem 1rem;
+}
+footer{
+    bottom: 0%;
+    background-color: #a21caf;
+    position: fixed;
+    width: 100%;
+    color: aliceblue;
+   
+}
+
+
+
+
+
+
+
+
+
+
+-----------------HTML
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+
+    <nav>
+      <div class="nav nav-brand">Arjun</div>
+      <ul class="list-non-bullet nav-pills">
+        <li class="list-item-inline">
+          <a class="link">Home</a>
+          </li>
+          <li class="list-item-inline">
+            <a class="link">contact</a>
+            </li>
+            <li class="list-item-inline">
+              <a class="link">project</a>
+              </li>
+              <li class="list-item-inline">
+                <a class="link">blogs</a>
+                </li>
+          </ul>
+
+    </nav>
+
+    <p>
+      Show me your portfolio. Okay, I like the button you have made. Can you re create the button without looking at source code? You're free to Google though.
+
+
+    </p>
+
+
+    
+    <button id="btn-primary">See Project</button>
+   <button id="btn-secondary">SecondaryButton</button>
+<footer>
+  <div class="nav nav-brand">Arjun</div>
+  <ul class="list-non-bullet nav-pills">
+    <li class="list-item-inline">
+      <a class="link">Home</a>
+      </li>
+      <li class="list-item-inline">
+        <a class="link">contact</a>
+        </li>
+        <li class="list-item-inline">
+          <a class="link">project</a>
+          </li>
+          <li class="list-item-inline">
+            <a class="link">blogs</a>
+            </li>
+      </ul>
+  </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

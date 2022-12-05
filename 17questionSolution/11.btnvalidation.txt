@@ -1,0 +1,49 @@
+var txt = document.querySelector("#txt-input");
+var btnSubmit = document.querySelector("#btn-submit");
+var outputDIv = document.querySelector("#output");
+
+function checkHandler() {
+  btnSubmit.disabled = true;
+  txtVal = txt.value;
+  console.log(txtVal);
+  if (txtVal == "" || txtVal == null) {
+    btnSubmit.disabled = true;
+    outputDIv.innerText = "Enter password";
+  } else if (txtVal.length >= 10) {
+    txt.style.backgroundColor = "green";
+    outputDIv.innerText = "success";
+    btnSubmit.disabled = false;
+  } else if (txtVal.length < 10) {
+    txt.style.backgroundColor = "red";
+    outputDIv.innerHTML = "password is lesser than 10";
+    btnSubmit.disabled = true;
+  }
+}
+
+-----------html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <p>
+      Create a password checker web app. If password is lesser than 10
+      characters then show an error to user otherwise show success. Someone can
+      ask to make the submit button disabled. Some can ask to make the input
+      field green or red depending on input.
+    </p>
+
+    <input type="password" id="txt-input">
+    <button id="btn-submit" disabled>Submit</button>
+    <div id="output"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
+
+
+txt.addEventListener("input", checkHandler);

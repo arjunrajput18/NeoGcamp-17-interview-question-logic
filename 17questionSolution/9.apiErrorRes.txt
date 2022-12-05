@@ -1,0 +1,18 @@
+const btnApi = document.querySelector("#btn-api");
+const output = document.querySelector("#output");
+//let serverUrl = 'https://www.googleapis.com/youtube/v3/search';
+//let serverUrl="https://unitube-server.herokuapp.com"
+
+//function errorhandler(e){
+  //output.innerHTML=e.message
+//}
+let serverUrl = 'https://jsonplaceholder.typicode.com/users/';
+
+function apiHandler() {
+  fetch(serverUrl)
+   .then(res => res.json())
+  .then(data => output.innerText = data.error)
+  .catch(error => output.innerText = error)
+  
+}
+btnApi.addEventListener("click", apiHandler);

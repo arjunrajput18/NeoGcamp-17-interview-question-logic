@@ -1,0 +1,10 @@
+
+Git?used for tracking changes
+1)Git is a version control software used for tracking changes in a file. 
+2)It is used by programmers in the software development phase where all programmers work on a single project and by using Git it helps to know who contributed what in the project.
+          
+
+
+PR?merge request to main branch.
+1) A Pull Request (PR) is a way to submit a contribution to yours or someone else's github repository. 
+2) A PR tells you what changes you have pushed to a branch in the repository on Github. Once a pull request is opened you can discuss or review the changes before its merged into the main branch.

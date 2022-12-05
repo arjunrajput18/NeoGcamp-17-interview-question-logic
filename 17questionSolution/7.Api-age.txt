@@ -1,0 +1,32 @@
+const btnApi=document.querySelector("#btn-api");
+const outputDiv=document.querySelector("#output");
+const txtInput=document.querySelector("#txt-input")
+
+function constructedURL(txt){
+  URL="https://api.agify.io/";
+  return URL+"?name="+txt
+}
+btnApi.disabled=true
+function inputHandler(){
+  if(txtInput.value){
+    outputDiv.innerHTML=""
+    btnApi.disabled=false
+  }
+  else{
+    btnApi.disabled=true
+  }
+}
+function apiHandler(){
+ 
+
+  txt=txtInput.value
+  fetch(constructedURL(txt))
+  .then(res=>res.json())
+  .then(json=>{
+    console.log(json.age)
+    outputDiv.innerHTML=`${txt.charAt(0).toUpperCase()+txt.slice(1)} and age is ${json.age}`
+  })
+}
+
+btnApi.addEventListener("click",apiHandler);
+txtInput.addEventListener("input",inputHandler)

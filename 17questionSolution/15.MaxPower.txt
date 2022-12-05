@@ -1,0 +1,24 @@
+// Create two objects with name, age, and power as Ram, 2500, Treta. Krishna, 2325, Dwapar Write a function which takes two objects and return the person with more power.
+
+
+
+
+var obj1 = {
+  name: "Ram",
+  power: 2500,
+  yuga: "Treta"
+};
+
+var obj2 = {
+  name: "Krishna",
+  power: 2325,
+  yuga: "Dwapar"
+}
+
+
+function getSuperPower(person1, person2) {
+  return person1.power > person2.power ? person1.name : person2.name;
+}
+
+
+console.log(getSuperPower(obj1, obj2))

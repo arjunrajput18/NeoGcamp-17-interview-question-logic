@@ -1,0 +1,47 @@
+// Create a CLI app which takes name, unit test marks, pre final marks, final marks of 5 students. And then print who has the highest marks. What if I ask you to print the average as well?
+
+var readlineSync=require("readline-sync");
+
+var nameArray=[];
+var unitArray=[];
+var preFinalArray=[];
+var finalArray=[];
+var highestMarksArray=[];
+var avgArray=[];
+
+
+for(var i=0;i<3;i++){
+  name=readlineSync.question("Student name  "+(i+1)+": ");
+  nameArray.push(name);
+    unit=readlineSync.question("unit marks :");
+  unitArray.push(unit);
+    preFinal=readlineSync.question("pre final marks :");
+  preFinalArray.push(preFinal);
+    final=readlineSync.question("final marks  :");
+  finalArray.push(final);  
+}
+
+
+for(i=0;i<nameArray.length;i++){
+  highestMarks=parseInt(unitArray[i])+parseInt(preFinalArray[i])+parseInt(finalArray[i])
+  highestMarksArray.push(highestMarks);
+
+  avg=highestMarksArray[i]/3;
+  avgArray.push(avg);
+  //console.log(highestMarks)
+}
+
+result=0;
+for(var i=0;i<3;i++){
+  if(highestMarksArray[i]>result){
+    result=highestMarksArray[i];
+    highestMarksStudentName=nameArray[i];
+  }
+}
+
+console.log("highest student  :"+highestMarksStudentName+" marks :"+result);
+
+
+for(i=0;i<3;i++){
+  console.log("avg of student :"+Math.floor(avgArray[i])+" student :"+nameArray[i]);
+}

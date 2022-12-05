@@ -1,0 +1,18 @@
+
+Git is a DevOps tool used for source code management. It is a free and open-source version control system used to handle small to very large projects efficiently. Git is used to tracking changes in the source code, enabling multiple developers to work together on non-linear development.
+
+What is meant by a pull request?
+A pull request – also referred to as a merge request 
+
+Pull requests let you tell others about changes you've pushed to a branch in a repository on GitHub. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before your changes are merged into the base branch.
+
+
+ to begin the process of merging new code changes with the main project repository.
+
+What is a pull request in Git? A pull request is an event in Git where a contributor asks a maintainer of a Git repository to review code they want to merge into a project.
+
+Pull requests ensure the integrity and user experience of the product by only merging code that has been appropriately reviewed and approved.
+
+A pull request – also referred to as a merge request – is an event that takes place in software development when a contributor/developer is ready to begin the process of merging new code changes with the main project repository.
+
+During a pull request, the repository maintainer reviews new code updates from a developer to determine whether or not it is ready to be released. 

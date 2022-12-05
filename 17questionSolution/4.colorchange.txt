@@ -1,0 +1,28 @@
+const txtInput=document.querySelector("#txt-input");
+const btnType=document.querySelector("#btn-type");
+const outputDiv=document.querySelector("#output")
+function eventHandler(e){
+  txt=txtInput.value;
+  btnVal=e.target.innerText;
+
+  if(btnVal=="red"){
+    outputDiv.style.color="red";
+    outputDiv.innerText=txt
+    txtInput.style.color="red";
+  }
+  else if(btnVal=="green"){
+    outputDiv.style.color="green";
+    outputDiv.innerText=txt
+    txtInput.style.color="green";
+    //console.log(txtInput.style.color="green")
+  }
+  else if(btnVal=="blue"){
+    outputDiv.style.color="blue";
+    outputDiv.innerText=txt
+    txtInput.style.color="blue";
+   // console.log(txtInput.style.color)
+  }
+}
+
+
+btnType.addEventListener("click",eventHandler)

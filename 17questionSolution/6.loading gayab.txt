@@ -1,0 +1,13 @@
+const btnLoad=document.querySelector("#btn-load");
+const outputDiv=document.querySelector("#output");
+
+function btnHandler(){
+  if(outputDiv.style.display=="none"){
+    outputDiv.style.display="block"
+  }else{
+    outputDiv.style.display="none"
+  }
+
+}
+
+btnLoad.addEventListener("click",btnHandler)

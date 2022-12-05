@@ -1,0 +1,30 @@
+// Create two objects with name, age, and power as Ram, 2500, Treta. Krishna, 2325, Dwapar. Say if every character in name is worth 35 power points.
+
+// Write a function which takes two objects and return the person with more power based on their name and power both.
+
+// Create two objects with name, power, and yuga as Ram, 2500, Treta. Krishna, 2325, Dwapar. Say if every character in name is worth 35 power points. Write a function which takes two objects and return the person with more power based on their name and power both.
+
+const obj1 = {
+  name: "Ram",
+  power: 2500,
+  yuga: "Treta",
+};
+
+const obj2 = {
+  name: "Krishna",
+  power: 2325,
+  yuga: "Dwapar",
+};
+
+const powerOfChar = 35;
+
+function getSuperPower(person1, person2) {
+  return getPower(person1) > getPower(person2) ? person1.name : person2.name;
+}
+
+function getPower(person) {
+  console.log(person.name.length * 35 + person.power + " " + person.name)
+  return person.name.length * 35 + person.power;
+}
+
+console.log("The superPowerFul :: " + getSuperPower(obj1, obj2));

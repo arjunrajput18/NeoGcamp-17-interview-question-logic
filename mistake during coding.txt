@@ -1,0 +1,16 @@
+1)in news detect app 
+eg newsArray=["x","y","z"];
+var check=newsArray.includes(input); <-- correct method
+learn: it automatically run it dont need to make for loop newsArray[i]  <-- wrong method;
+
+
+2)when compare password or any dont forget .length funtion
+
+3)if double equal sign
+output.style.display="none"  <-single equal .. not ==
+
+4)during copy paste above method please see double equal and single equal .see everything is fine or not
+
+5)alway check array[i] before using in anything
+
+6)remember always div element we can add style property not on txtInput.value here we can apply on only txtInput
