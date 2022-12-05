@@ -2,6 +2,34 @@ var txtInput = document.querySelector("#txt-input");
 var btnType = document.querySelector("#btn-type");
 var outputDiv = document.querySelector("#output");
 
+let fontSize=16;
+function eventHandler(e){
+
+txt=txtInput.value;
+btn=e.target.innerText
+if(btn=="+"){
+  fontSize+=2;
+  outputDiv.style.fontSize=fontSize+"px"
+  outputDiv.innerText=txt
+}
+if(btn=="-"){
+  fontSize-=2;
+  outputDiv.style.fontSize=fontSize+"px"
+  outputDiv.innerText=txt
+
+}
+}
+
+
+
+btnType.addEventListener("click",eventHandler)
+
+
+
+
+
+
+
 // function eventHandler(e){
 //   txt=txtInput.value
 //   btn=e.target.innerText;
@@ -20,27 +48,27 @@ var outputDiv = document.querySelector("#output");
 // }
 // function inputsHandler() {
 //   outputDiv.innerHTML = txtInput.value;
+// // }
+// let fontSizem = 16;
+
+// function eventHandler(e) {
+//   txt = txtInput.value;
+//   btn = e.target.innerText;
+//   if (btn == "+") {
+//     fontSizem += 2;
+
+//     outputDiv.style.fontSize = fontSizem + "px";
+//     outputDiv.innerHTML = txt;
+
+//   } else if (btn == "-") {
+//     fontSizem -= 2;
+
+//     outputDiv.style.fontSize = fontSizem + "px";
+//   }
 // }
-let fontSizem = 16;
-
-function eventHandler(e) {
-  txt = txtInput.value;
-  btn = e.target.innerText;
-  if (btn == "+") {
-    fontSizem += 2;
-
-    outputDiv.style.fontSize = fontSizem + "px";
-    outputDiv.innerHTML = txt;
-
-  } else if (btn == "-") {
-    fontSizem -= 2;
-
-    outputDiv.style.fontSize = fontSizem + "px";
-  }
-}
 
 // txtInput.addEventListener("input", inputsHandler);
-btnType.addEventListener("click", eventHandler);
+// btnType.addEventListener("click", eventHandler);
 
 // const inputBox = document.querySelector('#text-input');
 // const incrementBtn = document.querySelector('#increment');
