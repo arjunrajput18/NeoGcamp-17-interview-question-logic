@@ -1,0 +1,29 @@
+var txtInput=document.querySelector("#txt-input")
+var btnType=document.querySelector("#btn-type");
+var outputDiv=document.querySelector("#output")
+
+function eventHandler(e){
+  txt=txtInput.value;
+  btn=e.target.innerText
+  outputDiv.style.display="block";
+  console.log(btn)
+  if(btn=="h1"){
+        outputDiv.innerHTML=`<h1>${txt}</h1>`
+    // outputDiv.innerText=txt;
+  } else if(btn=="h2"){
+    outputDiv.innerHTML=`<h2>${txt}</h2>`;
+    
+  }
+  else if(btn=="h3"){
+    // outputDiv.style.fontSize="19px";
+    // outputDiv.innerText=txt;
+    outputDiv.innerHTML=`<h3>${txt}</h3>`
+  } else if(btn=="reset"){
+    outputDiv.style.display="none";
+    outputDiv.innerText=txt;
+  }
+
+}
+
+
+btnType.addEventListener("click",eventHandler)

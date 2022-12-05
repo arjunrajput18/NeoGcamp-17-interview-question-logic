@@ -1,3 +1,4 @@
+
 1)in news detect app 
 eg newsArray=["x","y","z"];
 var check=newsArray.includes(input); <-- correct method
@@ -14,3 +15,5 @@ output.style.display="none"  <-single equal .. not ==
 5)alway check array[i] before using in anything
 
 6)remember always div element we can add style property not on txtInput.value here we can apply on only txtInput
+
+7)dont put vaiable name in ("here") <-wrong  correct-> (here)

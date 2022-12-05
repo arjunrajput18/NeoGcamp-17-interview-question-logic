@@ -1,0 +1,66 @@
+var txtInput = document.querySelector("#txt-input");
+var btnType = document.querySelector("#btn-type");
+var outputDiv = document.querySelector("#output");
+
+// function eventHandler(e){
+//   txt=txtInput.value
+//   btn=e.target.innerText;
+//   if(btn=="+"){
+//     var style=window.getComputedStyle(outputDiv,null).getPropertyValue("font-size");
+//     var currentSize=parseFloat(style)
+//     outputDiv.style.fontSize=`${currentSize+2}px`
+//     outputDiv.innerText=txt
+//   }
+//   if(btn=="-"){
+//     var style=window.getComputedStyle(outputDiv,null).getPropertyValue("font-size");
+//     var currentSize=parseFloat(style)
+//     outputDiv.style.fontSize=`${currentSize-2}px`
+//     outputDiv.innerText=txt
+//   }
+// }
+// function inputsHandler() {
+//   outputDiv.innerHTML = txtInput.value;
+// }
+let fontSizem = 16;
+
+function eventHandler(e) {
+  txt = txtInput.value;
+  btn = e.target.innerText;
+  if (btn == "+") {
+    fontSizem += 2;
+
+    outputDiv.style.fontSize = fontSizem + "px";
+    outputDiv.innerHTML = txt;
+
+  } else if (btn == "-") {
+    fontSizem -= 2;
+
+    outputDiv.style.fontSize = fontSizem + "px";
+  }
+}
+
+// txtInput.addEventListener("input", inputsHandler);
+btnType.addEventListener("click", eventHandler);
+
+// const inputBox = document.querySelector('#text-input');
+// const incrementBtn = document.querySelector('#increment');
+// const decrementBtn = document.querySelector('#decrement');
+// const output = document.querySelector('#output');
+
+// //
+
+// let fontSize = 16;
+
+// inputBox.addEventListener('input', () => {
+//     output.innerText = inputBox.value;
+// });
+
+// incrementBtn.addEventListener('click', () => {
+//     fontSize+=2;
+//     output.style.fontSize = fontSize+'px';
+// });
+
+// decrementBtn.addEventListener('click', () => {
+//     fontSize-=2;
+//     output.style.fontSize = fontSize+'px';
+// });
