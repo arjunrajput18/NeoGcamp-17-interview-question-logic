@@ -1,0 +1,26 @@
+var inputFirst = document.querySelector("#first-input");
+var inputSecond = document.querySelector("#second-input");
+var btnType = document.querySelector("#btn-type");
+var outputDiv = document.querySelector("#output");
+
+
+function eventHandler(e) {
+  btn = e.target.innerText;
+  var first = parseInt(inputFirst.value);
+  var second = parseInt(inputSecond.value);
+  if (btn == "+") {
+    add = first + second;
+    outputDiv.innerText = add;
+  } else if (btn == "-") {
+    add = first - second;
+    outputDiv.innerText = add;
+  } else if (btn == "*") {
+    add = first * second;
+    outputDiv.innerText = add;
+  } else if (btn == "/") {
+    add = first / second;
+    outputDiv.innerHTML = add.toFixed(2);
+  }
+}
+
+btnType.addEventListener("click", eventHandler);
