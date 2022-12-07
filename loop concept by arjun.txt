@@ -1,0 +1,180 @@
+// Online Javascript Editor for free
+// Write, Edit and Run your Javascript code using JS Online Compiler
+
+// test=["ab","b","c"];
+
+// for(i=0;i<test.length;i++){
+//     slipt=test[i]
+//     console.log(slipt)
+// }
+
+// obj={a:"abrju",b:"hrhnrf",c:"hcghch"}
+
+// n=Object.keys(obj).length
+// console.log(n)
+// console.log(obj[Object.keys(obj)[0]])
+// for(i=0;i<n;i++){
+//     c=obj[Object.keys(obj)[i]]
+//     console.log(c)
+// }
+-----------------------------------------
+// str="javascript"
+
+// console.log(str.length)
+// for(i=0;i<str.length;i++){
+//     a=str[i]+" "+"adding"
+//     console.log(a)
+// }
+
+
+// a=99999
+// //console.log(a.toString()[4])
+// p=a.toString().length
+// var sum=0;
+// for(i=0;i<p;i++){
+//     num=a.toString()[i]
+//     console.log(num)
+//     sum=sum+parseInt(num)
+//     console.log(sum)
+// }
+
+
+// console.log("i am in last")
+// a=[1,2,3]
+// console.log(a.length)
+// var sum=0;
+// for(i=0;i<a.length;i++){
+//     sum+=a[i]
+//     console.log(sum)
+// }
+// console.log(`final output is ${sum}`)
+
+// obj={a:"2",b:"4",c:"5"}
+// objLength=Object.keys(obj).length
+// console.log(objLength)
+// console.log(Object.values(obj)[1])
+// sum=0
+// for(i=0;i<objLength;i++)
+// {
+//     sum+=parseInt(Object.values(obj)[i])
+//     console.log(sum)
+// }
+// console.log(sum)
+var str=""
+for(i=0;i<5;i++){
+    for(j=0;j<i;j++){
+    str+="*"
+    }
+    str+="\n"
+   
+}
+console.log(str)
+
+
+
+fastest way to access iterable array and string  used---: "for of loop"
+for(let n of array)
+
+
+/tempArray=["b","c","d"];
+//tempArray="qwe"
+tempArray="1341"
+sum=0
+for(let n of tempArray){
+    b=parseInt(n)
+    sum+=b
+    //console.log(sum)
+}
+ console.log(sum)
+console.log("===================")
+obj={a:"b",n:"y",z:"skbsa"}
+for(let x in obj){
+    console.log(obj[x])
+}
+
+
+===================
+import "./styles.css";
+
+export default function App() {
+  const shoppinList = ["1clothes", "bags", "comb"];
+  const itemNo = { cloths: "3", bags: "3", bottle: "Not there" };
+  return (
+    <div className="App">
+      <h1>Hello CodeSandbox</h1>
+
+      {shoppinList.map((val) => (
+        <p>{val}</p>
+      ))}
+      {Object.keys(shoppinList).map((val) => (
+        <li>{val}</li>
+      ))}
+      {Object.values(shoppinList).map((val) => (
+        <li>{val}</li>
+      ))}
+      {Object.keys(itemNo).map((val) => (
+        <li>{val}</li>
+      ))}
+      {Object.values(itemNo).map((val) => (
+        <li>{val}</li>
+      ))}
+      <h2>Start editing to see some magic happen!</h2>
+    </div>
+  );
+}
+==========================================
+import "./styles.css";
+
+export default function App() {
+  const shoppinList = ["1clothes", "bags", "comb"];
+  const countShopping = ["12", "13", "15"];
+  const itemNo = { cloths: "3", bags: "3", bottle: "Not there" };
+  const countItem = { cloths: "120", bags: "23", bottle: "02" };
+
+  function calcaulateSum() {
+    const n = Object.keys(countItem).length;
+    let sum = 0;
+    for (let i = 0; i < n; i++) {
+      let value = Object.values(countItem)[i];
+      sum += Number(value);
+    }
+    return sum;
+  }
+  function calculateShopping() {
+    const n = Object.keys(countShopping).length;
+    let sum = 0;
+    for (let i = 0; i < n; i++) {
+      console.log(Number(Object.values(countShopping)[i]))
+      let value = Object.values(countShopping)[i];
+      sum = sum + Number(value);
+    }
+    return sum;
+  }
+  return (
+    <div className="App">
+      <h1>Hello CodeSandbox</h1>
+
+      {shoppinList.map((val, i) => (
+        <p key={i}>{val}</p>
+      ))}
+      {Object.keys(shoppinList).map((val, i) => (
+        <li key={i}>{val}</li>
+      ))}
+      {Object.values(shoppinList).map((val, i) => (
+        <li key={i}>{val}</li>
+      ))}
+      {Object.keys(itemNo).map((val, i) => (
+        <li key={i}>{val}</li>
+      ))}
+      {Object.values(countItem).map((val, i) => (
+        <li key={i}>{val}</li>
+      ))}
+      {calcaulateSum()}
+
+      {<h1>{calculateShopping()}</h1>}
+      <h2>Start editing to see some magic happen!</h2>
+    </div>
+  );
+}
+
+
