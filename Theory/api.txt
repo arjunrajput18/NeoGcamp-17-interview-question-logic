@@ -1,0 +1,9 @@
+API stands for Application Programming Interface. An API allows your application to interact with an external service.
+ 
+api are constructs made available in programming languages to allows  developers to create complex functionality more easily.
+
+basically,APIs are mechanisms that enable two software components to communicate with each other using a set of definitions and protocols.
+
+ 
+then give example.
+translate api 
