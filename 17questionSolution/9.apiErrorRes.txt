@@ -16,3 +16,36 @@ function apiHandler() {
   
 }
 btnApi.addEventListener("click", apiHandler);
+
+
+===============
+var txt = document.querySelector("#txt-input");
+var btnFetch = document.querySelector("#btn-fetch");
+var outputDiv = document.querySelector("#output");
+
+
+function errorHandler(e){
+  outputDiv.innerHTML=e.message
+}
+
+
+function eventHandler(){
+  fetch("https://www.googleapis.com/youtube/v3/search")
+  .then(res=>{
+    if(res.status===404){
+      outputDiv.innerHTML="page not found"
+    }
+    else if(res.status===403){
+      outputDiv.innerHTML='you are not logged in'
+    }
+    else if(res.status===200){
+      outputDiv.innerHTML="okay to go"
+    }
+
+
+  })
+  
+}
+
+
+btnFetch.addEventListener("click", eventHandler);

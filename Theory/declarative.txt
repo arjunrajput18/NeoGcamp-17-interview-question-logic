@@ -1,2 +1,5 @@
 declarative programing means when your code shows what you want to happen.
 
+
+program specify what is to be done
+ 
