@@ -1,0 +1,14 @@
+let promise=new Promise((resolve,reject)=>{
+    let x="neogCamp";
+    let y="neogCamjvj"
+    if(x===y){
+        resolve()
+    }else{
+        reject()
+    }
+})
+
+
+promise
+.then(()=>console.log("successfully🌝"))
+.catch(()=>console.log("rejected😔"))
