@@ -30,3 +30,27 @@ function apiHandler(){
 
 btnApi.addEventListener("click",apiHandler);
 txtInput.addEventListener("input",inputHandler)
+
+
+
+===================
+var txt = document.querySelector("#txt-input");
+var btnFetch = document.querySelector("#btn-fetch");
+var outputDiv = document.querySelector("#output");
+
+function constructedURL(inputs){
+  return "https://api.agify.io/?name="+inputs
+}
+
+function eventHandler() {
+  inputs=txt.value
+fetch(constructedURL(inputs))
+.then(res=>res.json())
+.then(json=>{
+  console.log(json)
+  outputDiv.innerText=`${inputs.charAt(0).toUpperCase()+inputs.slice(1).toLowerCase()}  ${json.age}`
+})
+
+}
+
+btnFetch.addEventListener("click", eventHandler);

@@ -1,13 +1,13 @@
 // Online Javascript Editor for free
 // Write, Edit and Run your Javascript code using JS Online Compiler
-
+----------------------------------
 // test=["ab","b","c"];
 
 // for(i=0;i<test.length;i++){
 //     slipt=test[i]
 //     console.log(slipt)
 // }
-
+--------------------------------
 // obj={a:"abrju",b:"hrhnrf",c:"hcghch"}
 
 // n=Object.keys(obj).length
@@ -26,7 +26,7 @@
 //     console.log(a)
 // }
 
-
+-----------------------------------------
 // a=99999
 // //console.log(a.toString()[4])
 // p=a.toString().length
@@ -37,7 +37,7 @@
 //     sum=sum+parseInt(num)
 //     console.log(sum)
 // }
-
+-------------------------------------------
 
 // console.log("i am in last")
 // a=[1,2,3]
@@ -48,7 +48,7 @@
 //     console.log(sum)
 // }
 // console.log(`final output is ${sum}`)
-
+------------------------------------------------------
 // obj={a:"2",b:"4",c:"5"}
 // objLength=Object.keys(obj).length
 // console.log(objLength)
@@ -70,7 +70,7 @@ for(i=0;i<5;i++){
 }
 console.log(str)
 
-
+---------------------------------------------------------
 
 fastest way to access iterable array and string  used---: "for of loop"
 for(let n of array)
