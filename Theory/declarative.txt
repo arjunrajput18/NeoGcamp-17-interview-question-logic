@@ -1,0 +1,2 @@
+declarative programing means when your code shows what you want to happen.
+
